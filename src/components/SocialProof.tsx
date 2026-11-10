@@ -80,21 +80,15 @@ export default function SocialProof({ lang }: { lang: Lang }) {
           </div>
         </Reveal>
 
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+        <div className="mt-8 grid grid-cols-1 gap-3 sm:gap-4 lg:grid-cols-2">
           {[
-            { v: <Counter to={480} suffix="M" prefix={lang === 'en' ? 'SAR ' : ''} />, l: t.stats_revenue, s: lang === 'en' ? 'Across Salla, Zid & Shopify' : 'عبر سلة وزد وشوبيفاي' },
-            { v: <Counter to={6.2} suffix="x" decimals={1} />, l: t.stats_roas, s: lang === 'en' ? 'Snap • TikTok • Meta • Google' : 'سناب • تيك توك • ميتا • قوقل' },
-            { v: <Counter to={240} suffix="+" />, l: t.stats_brands, s: 'KSA 45% • UAE 30% • QA/KW/BH/OM 25%' },
-            { v: <Counter to={98} suffix="%" />, l: t.stats_retention, s: lang === 'en' ? 'Stay past month 6' : 'يستمرون بعد الشهر السادس' },
+            { l: t.stats_revenue, s: lang === 'en' ? 'We measure success in customers and sales — with transparent monthly performance reports.' : 'نقيس النجاح بعدد العملاء والمبيعات، مع تقارير أداء شفافة كل شهر.' },
+            { l: t.stats_brands, s: lang === 'en' ? 'A specialist marketing partner for growing brands in Saudi & the UAE.' : 'وكيل تسويق متخصص للعلامات النامية في السعودية والإمارات.' },
           ].map((s, i) => (
             <Reveal key={i} delay={i * 90}>
-              <div className="card-lift group relative overflow-hidden rounded-2xl border border-ink-900/[0.08] bg-white p-5 sm:p-6 text-center hover:border-gold-500/40 hover:shadow-[0_24px_50px_-20px_rgba(201,162,39,0.45)]">
-                <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-gold-500/70 to-transparent opacity-0 transition group-hover:opacity-100" />
-                <p className="font-display text-[28px] sm:text-[34px] font-extrabold tracking-tight text-ink-900">
-                  {s.v}
-                </p>
-                <p className="mt-1 text-[13px] font-extrabold text-ink-900">{s.l}</p>
-                <p className="mt-0.5 text-[11.5px] font-semibold text-ink-900/50">{s.s}</p>
+              <div className="card-lift group relative overflow-hidden rounded-2xl border border-ink-900/[0.08] bg-white p-5 sm:p-6 text-center hover:border-gold-500/40">
+                <p className="mt-1 text-[14px] font-extrabold text-ink-900">{s.l}</p>
+                <p className="mt-1.5 text-[12.5px] font-semibold text-ink-900/60 leading-relaxed">{s.s}</p>
               </div>
             </Reveal>
           ))}
