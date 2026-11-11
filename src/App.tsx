@@ -10,7 +10,7 @@ import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
-import DownloadZip from './components/DownloadZip';
+
 import type { Lang } from './lib/i18n';
 import { dict } from './lib/i18n';
 
@@ -90,11 +90,6 @@ export default function App() {
       </main>
 
       <Footer lang={lang} />
-
-      {/* Floating download — Option B zip */}
-      <div className="fixed bottom-5 start-5 z-50 flex flex-col items-start gap-2.5">
-        <DownloadZip lang={lang} variant="floating" />
-      </div>
 
       {/* Floating actions */}
       <div className="fixed bottom-5 end-5 z-50 flex flex-col items-end gap-2.5">

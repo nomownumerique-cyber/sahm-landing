@@ -1,5 +1,4 @@
 import { MapPin, Mail, Phone, Camera, AtSign, Globe, Send } from 'lucide-react';
-import DownloadZip from './DownloadZip';
 import type { Lang } from '../lib/i18n';
 import { dict } from '../lib/i18n';
 
@@ -31,7 +30,7 @@ export default function Footer({ lang }: { lang: Lang }) {
             <p className="mt-4 max-w-sm text-[14px] leading-relaxed text-white/60 font-medium">{t.footer_tag}</p>
             <div className="mt-5 space-y-2 text-[13.5px] font-semibold text-white/70">
               <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-gold-400" /> {isAr ? 'الرياض • دبي • الدوحة' : 'Riyadh • Dubai • Doha'}</p>
-              <p className="flex items-center gap-2"><Mail className="h-4 w-4 text-gold-400" /> <a href="mailto:salam@sahm.agency" className="hover:text-white">salam@sahm.agency</a></p>
+              <p className="flex items-center gap-2"><Mail className="h-4 w-4 text-gold-400" /> <a href="mailto:sahm@growthed.online" dir="ltr" className="hover:text-white">sahm@growthed.online</a></p>
               <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-gold-400" /> <a href="tel:+213558732940" dir="ltr" className="hover:text-white">+213 558 732 940</a></p>
             </div>
             <div className="mt-5 flex gap-2">
@@ -84,41 +83,10 @@ export default function Footer({ lang }: { lang: Lang }) {
           </nav>
 
           <div>
-            <p className="text-[12px] font-extrabold uppercase tracking-[0.2em] text-white/40">{isAr ? 'نشرة النمو الخليجية' : 'Gulf Growth Letter'}</p>
-            <p className="mt-4 text-[13.5px] font-medium text-white/60 leading-relaxed">
-              {isAr ? 'تكتيك واحد عملي كل أحد — يقرأه 8,400 مؤسس خليجي. بدون إزعاج.' : 'One actionable tactic every Sunday — read by 8,400 Gulf founders. No spam.'}
-            </p>
-            <form
-              className="mt-4 flex gap-2"
-              onSubmit={(e) => e.preventDefault()}
-              aria-label="Newsletter"
-            >
-              <label htmlFor="nl-email" className="sr-only">{isAr ? 'البريد الإلكتروني' : 'Email'}</label>
-              <input
-                id="nl-email"
-                type="email"
-                required
-                placeholder={isAr ? 'بريدك المهني…' : 'Work email…'}
-                className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-[14px] font-semibold text-white placeholder:text-white/35 focus:border-gold-400"
-              />
-              <button className="shrink-0 rounded-xl bg-gradient-to-b from-gold-400 to-gold-600 px-4 py-3 text-[14px] font-extrabold text-ink-950 transition hover:brightness-110" aria-label="Subscribe">
-                {isAr ? 'اشترك' : 'Join'}
-              </button>
-            </form>
+
             <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4 text-[12.5px] font-semibold text-white/60">
               <p className="font-extrabold text-white/85">{isAr ? 'مكاتبنا' : 'Our offices'}</p>
               <p className="mt-1.5 leading-relaxed" dir="ltr">Riyadh: KAFD, Tower 3 • Dubai: Business Bay, Bay Gate • Doha: Lusail Marina</p>
-            </div>
-            <div className="mt-3 rounded-2xl border border-gold-500/25 bg-gold-500/10 p-4">
-              <p className="text-[13px] font-extrabold text-gold-200">
-                {isAr ? 'تحتاج ملفات الموقع؟' : 'Need the site files?'}
-              </p>
-              <p className="mt-1 text-[12px] font-semibold text-white/60">
-                {isAr ? 'حمّل الخيار B كاملاً ZIP بضغطة واحدة.' : 'Download full Option B as ZIP in one click.'}
-              </p>
-              <div className="mt-3 rounded-xl bg-white p-1.5">
-                <DownloadZip lang={lang} variant="inline" />
-              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, ArrowUpRight, Phone } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Phone, Mail } from 'lucide-react';
 import type { Lang } from '../lib/i18n';
 import { dict } from '../lib/i18n';
 
@@ -105,6 +105,14 @@ export default function Navbar({ lang, setLang }: { lang: Lang; setLang: (l: Lan
             >
               <Phone className="h-4 w-4" />
               <span dir="ltr">+213 558 732 940</span>
+            </a>
+            <a
+              href="mailto:sahm@growthed.online"
+              aria-label={lang === 'ar' ? 'راسلنا بالبريد' : 'Email us'}
+              className="hidden xl:inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-[13px] font-bold text-ink-900/70 hover:text-ink-900"
+            >
+              <Mail className="h-4 w-4" />
+              <span className="hidden 2xl:inline">{lang === 'ar' ? 'راسلنا بالبريد' : 'Email us'}</span>
             </a>
             <a
               href="#cta"

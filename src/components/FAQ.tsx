@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, MessageCircle, PhoneCall } from 'lucide-react';
+import { Plus, MessageCircle, PhoneCall, Mail } from 'lucide-react';
 import Reveal from './Reveal';
 import type { Lang } from '../lib/i18n';
 import { dict } from '../lib/i18n';
@@ -58,6 +58,9 @@ export default function FAQ({ lang }: { lang: Lang }) {
                   </a>
                   <a href="tel:+213558732940" className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-[14px] font-extrabold text-white transition hover:bg-white/10">
                     <PhoneCall className="h-4 w-4" /> <span dir="ltr">+213 558 732 940</span>
+                  </a>
+                  <a href="mailto:sahm@growthed.online" className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-[14px] font-extrabold text-white transition hover:bg-white/10">
+                    <Mail className="h-4 w-4" /> {isAr ? 'راسلنا بالبريد' : 'Email us'}
                   </a>
                 </div>
               </div>
