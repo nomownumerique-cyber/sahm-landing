@@ -72,15 +72,7 @@ export default function Testimonials({ lang }: { lang: Lang }) {
           })}
         </div>
 
-        <Reveal delay={120}>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[12.5px] font-extrabold text-ink-900/45">
-            <span>★ Google Partner</span>
-            <span>★ Meta Business Partner</span>
-            <span>★ Snapchat Certified</span>
-            <span>★ TikTok Marketing Partner</span>
-            <span>★ Salla Expert • Zid Partner</span>
-          </div>
-        </Reveal>
+
       </div>
     </section>
   );
